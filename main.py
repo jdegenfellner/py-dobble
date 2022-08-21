@@ -10,13 +10,11 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 import openpyxl
-import openpyxl
-from pathlib import Path
+import pandas as pd
 
-xlsx_file = Path('SimData', 'play_data.xlsx')
-wb_obj = openpyxl.load_workbook(xlsx_file)
+wb_obj = openpyxl.load_workbook('Cards_Symbols.xlsx')
 
 # Read the active sheet:
 sheet = wb_obj.active
-
+data_df = pd.DataFrame(sheet.values)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
