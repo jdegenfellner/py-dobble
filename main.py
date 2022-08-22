@@ -15,4 +15,11 @@ df = pd.DataFrame(sheet.values)
 df = df.fillna(0)
 df = df.set_index(0)
 df = df.iloc[1: , :]
+
 df.head(10)
+# row names
+list(df.index.values.tolist())
+# col names
+for col in df.columns:
+    print(col)
+
