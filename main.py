@@ -65,7 +65,6 @@ while i < 6:
         count_player_2 += 1
     if i == 6:
         break
-
   print("player 1 = " + repr(count_player_1))
   print("player 2 = " + repr(count_player_2))
   if count_player_1 > count_player_2:
@@ -74,5 +73,3 @@ while i < 6:
     print("player 2 is the winner")
   else
     print("draw")
-
-
