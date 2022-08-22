@@ -3,7 +3,7 @@
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 # Press the green button in the gutter to run the script.
-if __name__ == '__main__':
+#if __name__ == '__main__':
 import openpyxl
 import pandas as pd
 import random
@@ -29,8 +29,6 @@ df = df.iloc[1: , :]
 # Pseudo-code for game:
 
 # Set counter player 1 and player 2 = 0
-count_player_1 = 0
-count_player_2 = 0
 # while counter < number of rounds played:
 # do:
 # 1) Draw 2 distinct columns from columns of df
@@ -38,8 +36,12 @@ count_player_2 = 0
 # a) in console with "symbols.." or
 # b) visually, beautifully with Dobble-pictures.
 
+count_player_1 = 0
+count_player_2 = 0
+
 i = 1
 while i < 6:
+    i += 1
     random_cols = random.sample(range(1, 58), 2)  # draw random columns
     two_cards = df[random_cols]  # choose cards
     two_cards.columns = ['card1', 'card2']
@@ -61,12 +63,16 @@ while i < 6:
         count_player_1 += 1
     elif name == "j":
         count_player_2 += 1
-if i == 6:
-    break
-i += 1
+    if i == 6:
+        break
 
-
-
-
+  print("player 1 = " + repr(count_player_1))
+  print("player 2 = " + repr(count_player_2))
+  if count_player_1 > count_player_2:
+      print("player 1 is the winner")
+  elif count_player_2 > count_player_1:
+    print("player 2 is the winner")
+  else
+    print("draw")
 
 
