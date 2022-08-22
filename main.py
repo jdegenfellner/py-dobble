@@ -6,6 +6,8 @@
 if __name__ == '__main__':
 import openpyxl
 import pandas as pd
+import random
+from math import comb
 
 # reading game matrix
 wb_obj = openpyxl.load_workbook('Cards_Symbols.xlsx')
@@ -16,12 +18,12 @@ df = df.set_index(0)
 df = df.iloc[1: , :]
 
 # checking
-df.head(10)
+#df.head(10)
 # row names
-list(df.index.values.tolist())
+#list(df.index.values.tolist())
 # col names
-for col in df.columns:
-    print(col)
+#for col in df.columns:
+#    print(col)
 
 
 # Pseudo-code for game:
@@ -35,6 +37,11 @@ count_player_2 = 0
 # 2) Show them either
 # a) in console with "symbols.." or
 # b) visually, beautifully with Dobble-pictures.
+
+
+randomlist = random.sample(range(1, 58), 2)
+
+
 
 name = input('Which player was faster?\n')
 if name == "k":
