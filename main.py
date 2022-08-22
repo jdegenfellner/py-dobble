@@ -12,8 +12,7 @@ wb_obj = openpyxl.load_workbook('Cards_Symbols.xlsx')
 # Read the active sheet:
 sheet = wb_obj.active
 df = pd.DataFrame(sheet.values)
-df.fillna(0)
+df = df.fillna(0)
 df = df.set_index(0)
 df = df.iloc[1: , :]
-
-#del df[0]
+df.head(10)
