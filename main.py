@@ -7,19 +7,35 @@ if __name__ == '__main__':
 import openpyxl
 import pandas as pd
 
+# reading game matrix
 wb_obj = openpyxl.load_workbook('Cards_Symbols.xlsx')
-
-# Read the active sheet:
 sheet = wb_obj.active
 df = pd.DataFrame(sheet.values)
 df = df.fillna(0)
 df = df.set_index(0)
 df = df.iloc[1: , :]
 
+# checking
 df.head(10)
 # row names
 list(df.index.values.tolist())
 # col names
 for col in df.columns:
     print(col)
+
+
+# Pseudo-code for game:
+
+# set counter player 1 and player 2 = 0
+
+# while counter < number of rounds played
+# do:
+# 1) draw 2 distinct columns from columns of df
+# 2) show them either
+# a) in console with "symbols" or
+# b) visually, beautifully with Dobble pictures.
+
+
+
+
 
