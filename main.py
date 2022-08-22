@@ -38,6 +38,7 @@ count_player_2 = 0
 # a) in console with "symbols.." or
 # b) visually, beautifully with Dobble-pictures.
 
+i = 1
 while i < 6:
     random_cols = random.sample(range(1, 58), 2)  # draw random columns
     two_cards = df[random_cols]  # choose cards
@@ -58,10 +59,10 @@ while i < 6:
     name = input('Which player was faster?\n')
     if name == "k":
         count_player_1 += 1
-        print(count_player_1)
     elif name == "j":
         count_player_2 += 1
-        print(count_player_2)
+if i == 6:
+    break
 i += 1
 
 
