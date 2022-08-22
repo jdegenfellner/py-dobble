@@ -26,16 +26,22 @@ for col in df.columns:
 
 # Pseudo-code for game:
 
-# set counter player 1 and player 2 = 0
-
-# while counter < number of rounds played
+# Set counter player 1 and player 2 = 0
+count_player_1 = 0
+count_player_2 = 0
+# while counter < number of rounds played:
 # do:
-# 1) draw 2 distinct columns from columns of df
-# 2) show them either
-# a) in console with "symbols" or
-# b) visually, beautifully with Dobble pictures.
+# 1) Draw 2 distinct columns from columns of df
+# 2) Show them either
+# a) in console with "symbols.." or
+# b) visually, beautifully with Dobble-pictures.
 
-
-
+name = input('Which player was faster?\n')
+if name == "k":
+  count_player_1 += 1
+  print(count_player_1)
+elif name == "j":
+    count_player_2 += 1
+    print(count_player_2)
 
 
