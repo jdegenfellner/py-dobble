@@ -23,7 +23,7 @@ df = df.iloc[1: , :]
 #list(df.index.values.tolist())
 # col names
 #for col in df.columns:
-#    print(col)
+#   print(col)
 
 
 # Pseudo-code for game:
@@ -38,17 +38,34 @@ count_player_2 = 0
 # a) in console with "symbols.." or
 # b) visually, beautifully with Dobble-pictures.
 
+while i < 6:
+    random_cols = random.sample(range(1, 58), 2)  # draw random columns
+    two_cards = df[random_cols]  # choose cards
+    two_cards.columns = ['card1', 'card2']
+    card1 = two_cards.loc[:, ['card1']]
+    card1 = card1.loc[two_cards['card1'] == 1]
+    card2 = two_cards.loc[:, ['card2']]
+    card2 = card2.loc[two_cards['card2'] == 1]
 
-randomlist = random.sample(range(1, 58), 2)
+    symbols_card1 = card1.index.values.tolist()
+    symbols_card2 = card2.index.values.tolist()
+
+    random.shuffle(symbols_card1)
+    random.shuffle(symbols_card2)
+
+    print(symbols_card1)
+    print(symbols_card2)
+    name = input('Which player was faster?\n')
+    if name == "k":
+        count_player_1 += 1
+        print(count_player_1)
+    elif name == "j":
+        count_player_2 += 1
+        print(count_player_2)
+i += 1
 
 
 
-name = input('Which player was faster?\n')
-if name == "k":
-  count_player_1 += 1
-  print(count_player_1)
-elif name == "j":
-    count_player_2 += 1
-    print(count_player_2)
+
 
 
