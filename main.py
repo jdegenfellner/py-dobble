@@ -27,7 +27,7 @@ df = df.iloc[1: , :]
 #   print(col)
 
 
-# Pseudo-code for game:
+# update...Pseudo-code for game:
 
 # Set counter player 1 and player 2 = 0
 # while counter < number of rounds played:
