@@ -8,6 +8,8 @@ import openpyxl
 import pandas as pd
 import random
 
+# create new cards with dobble-algo.py
+
 # reading game matrix
 wb_obj = openpyxl.load_workbook('Cards_Symbols.xlsx')
 sheet = wb_obj.active
