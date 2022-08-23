@@ -33,8 +33,13 @@ df = df.iloc[1: , :]
 # do:
 # 1) Draw 2 distinct columns from columns of df
 # 2) Show them either
-# a) in console with "symbols.." or
+# done---a) in console with "symbols.." or
 # b) visually, beautifully with Dobble-pictures.
+#    - define 57 symbols
+#    - choose 2 random columns
+#    - resize symbols on each card randomly
+#    - put them equidistantly (approximately) on each card
+#    - show cards next to each other
 
 count_player_1 = 0
 count_player_2 = 0
