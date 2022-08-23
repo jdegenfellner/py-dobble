@@ -7,7 +7,6 @@
 import openpyxl
 import pandas as pd
 import random
-from math import comb
 
 # reading game matrix
 wb_obj = openpyxl.load_workbook('Cards_Symbols.xlsx')
@@ -79,3 +78,14 @@ elif count_player_2 > count_player_1:
     print("Result: Player 2 is the winner")
 else:
     print("Result: draw")
+
+from turtle import *
+color('red', 'yellow')
+begin_fill()
+while True:
+    forward(200)
+    left(170)
+    if abs(pos()) < 1:
+        break
+end_fill()
+done()
