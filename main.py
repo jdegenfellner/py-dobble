@@ -1,12 +1,25 @@
-# This is a sample Python script.
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-# Press the green button in the gutter to run the script.
-#if __name__ == '__main__':
 import openpyxl
 import pandas as pd
 import random
+
+
+# update...Pseudo-code for game:
+
+# create new cards with dobble-algo.py
+# Set counter player 1 and player 2 = 0
+# while counter < number of rounds played:
+# do:
+# 1) Draw 2 distinct columns from columns of df
+# 2) Show them either
+# done---a) in console with "symbols.." or
+# b) visually, beautifully with Dobble-pictures.
+#    - define 57 symbols
+#    - choose 2 random columns
+#    - resize symbols on each card randomly
+#    - put them equidistantly (approximately) on each card
+#    - show cards next to each other
+
+
 
 # create new cards with dobble-algo.py
 
@@ -27,20 +40,6 @@ df = df.iloc[1:, :]
 #   print(col)
 
 
-# update...Pseudo-code for game:
-
-# Set counter player 1 and player 2 = 0
-# while counter < number of rounds played:
-# do:
-# 1) Draw 2 distinct columns from columns of df
-# 2) Show them either
-# done---a) in console with "symbols.." or
-# b) visually, beautifully with Dobble-pictures.
-#    - define 57 symbols
-#    - choose 2 random columns
-#    - resize symbols on each card randomly
-#    - put them equidistantly (approximately) on each card
-#    - show cards next to each other
 
 count_player_1 = 0
 count_player_2 = 0
