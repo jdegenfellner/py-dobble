@@ -16,7 +16,7 @@ sheet = wb_obj.active
 df = pd.DataFrame(sheet.values)
 df = df.fillna(0)
 df = df.set_index(0)
-df = df.iloc[1: , :]
+df = df.iloc[1:, :]
 
 # checking
 #df.head(10)
