@@ -2,12 +2,11 @@ import openpyxl
 import pandas as pd
 import random
 
-
 # update...Pseudo-code for game:
 
 # create new cards with dobble-algo.py
-# Set counter player 1 and player 2 = 0
-# while counter < number of rounds played:
+# Set point-counter player 1 and player 2 = 0
+# while counter < number_of_rounds_to_be_played (simply determine by drawing all columns):
 # do:
 # 1) Draw 2 distinct columns from columns of df
 # 2) Show them either
@@ -38,8 +37,6 @@ df = df.iloc[1:, :]
 # col names
 #for col in df.columns:
 #   print(col)
-
-
 
 count_player_1 = 0
 count_player_2 = 0
