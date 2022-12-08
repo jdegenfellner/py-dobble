@@ -68,12 +68,12 @@ while i < 6:
     if i == 6:
         break
 
-print("player 1 = " + repr(count_player_1))
-print("player 2 = " + repr(count_player_2))
+print("Kerstin = " + repr(count_player_1))
+print("Jürgen = " + repr(count_player_2))
 if count_player_1 > count_player_2:
-    print("Result: Player 1 is the winner")
+    print("Result: Kerstin is the winner")
 elif count_player_2 > count_player_1:
-    print("Result: Player 2 is the winner")
+    print("Result: Jürgen is the winner")
 else:
     print("Result: draw")
 
