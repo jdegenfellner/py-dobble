@@ -26,7 +26,7 @@ import random
 wb_obj = openpyxl.load_workbook('Cards_Symbols.xlsx')
 sheet = wb_obj.active
 df = pd.DataFrame(sheet.values)
-df = df.fillna(0)
+df = df.fillna(0) # fill NAs with zeros
 df = df.set_index(0)
 df = df.iloc[1:, :]
 
