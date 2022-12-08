@@ -55,8 +55,8 @@ while i < 6:
     symbols_card1 = card1.index.values.tolist()
     symbols_card2 = card2.index.values.tolist()
 
-    random.shuffle(symbols_card1)
-    random.shuffle(symbols_card2)
+    #random.shuffle(symbols_card1)
+    #random.shuffle(symbols_card2)
 
     print(symbols_card1)
     print(symbols_card2)
