@@ -22,7 +22,7 @@ import random
 
 # create new cards with dobble-algo.py
 
-# reading game matrix
+# Reading game matrix
 wb_obj = openpyxl.load_workbook('Cards_Symbols.xlsx')
 sheet = wb_obj.active
 df = pd.DataFrame(sheet.values)
@@ -30,7 +30,7 @@ df = df.fillna(0)
 df = df.set_index(0)
 df = df.iloc[1:, :]
 
-# checking
+# Checking
 #df.head(10)
 # row names
 #list(df.index.values.tolist())
@@ -41,10 +41,15 @@ df = df.iloc[1:, :]
 count_player_1 = 0
 count_player_2 = 0
 
+# Instead of this simple text-dobble, we want to select symbols according to an assortment list,
+# show the symbols of, e.g. card 1 resized and rotated next to card 2.
+# Another way of achieving this could be just using the "stolen" dobble cards I downloaded.
+# Selecting the right symbol can be done either by clicking or by writing it down (not very user-friendly).
+
 i = 1
 while i < 6:
     i += 1
-    random_cols = random.sample(range(1, 58), 2)  # draw random columns
+    random_cols = random.sample(range(1, 58), 2)  # draw 2 random columns
     two_cards = df[random_cols]  # choose cards
     two_cards.columns = ['card1', 'card2']
     card1 = two_cards.loc[:, ['card1']]
@@ -76,6 +81,9 @@ elif count_player_2 > count_player_1:
     print("Result: Jürgen is the winner")
 else:
     print("Result: draw")
+
+
+
 
 from turtle import *
 color('red', 'yellow')
