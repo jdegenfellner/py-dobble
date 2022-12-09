@@ -65,7 +65,7 @@ while i < 6:
 
     print(symbols_card1)
     print(symbols_card2)
-    name = input('Which player was faster?\n')
+    name = input('Which player was faster (j/k)?\n')
     if name == "k":
         count_player_1 += 1
     elif name == "j":
